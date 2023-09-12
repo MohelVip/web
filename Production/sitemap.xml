@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://mohel.vip/</loc>
+      <lastmod>2023-07-10</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://mohel.vip/#menu-Contact</loc>
+      <lastmod>2023-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://mohel.vip/#menu-Galery</loc>
+      <lastmod>2023-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://mohel.vip/#menu-Sheelot</loc>
+      <lastmod>2023-07-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+   </url>
+   <url>
+      <loc>https://mohel.vip/#menu-Hamlatsot</loc>
+      <lastmod>2023-07-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+   </url>
+   <url>
+      <loc>https://mohel.vip/#menu-BritMila</loc>
+      <lastmod>2023-06-28</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+</urlset>

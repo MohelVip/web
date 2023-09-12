@@ -1,0 +1,1086 @@
+        /* mobile.css */
+        /* Styles for mobile devices */
+           
+        @font-face {
+            font-family: 'Open Sans Hebrew Condensed';
+            src: url('fonts/OpenSansHebrewCondensed-Bold.ttf') format('truetype');
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Open Sans Hebrew Condensed Normal';
+            src: url('fonts/OpenSansHebrewCondensed-Regular.ttf') format('truetype');
+            font-display: swap;
+        }
+        
+        
+        @font-face {
+            font-family: 'Open Sans Hebrew';
+            src: url('fonts/OpenSansHebrew-Regular.ttf') format('truetype');
+            font-display: swap;
+        }
+        .menu{
+            display: none;
+        }
+        .menu-side-mobile {
+            position: fixed;
+            top: 0;
+            right: 0; /* Updated: Positioning the menu on the right side */
+            width: 35vw;
+            height: 100%;
+            background-color: #f1f1f1;
+            overflow-x: hidden;
+            padding-top: 15vw;
+            transform: translateX(100%); /* Updated: Translate menu from the right side */
+            transition: transform 0.3s;
+          }
+          
+          .menu-side-mobile.show {
+            visibility: visible;
+            transform: translateX(0);
+          }
+          
+          .menu-item {
+            padding: 2vw;
+            text-decoration: none;
+            text-align: right;
+            color: #333;
+            display: block;
+            transition: background-color 0.3s;
+            font-family: 'Open Sans Hebrew Condensed';
+            font-size: 5vw;
+        }
+          
+          .menu-item:hover {
+            background-color: #4966B0;
+          }
+
+          .toggle-button {
+            margin-right: 2vw;
+            margin-top: 2vw;
+            
+        }
+      
+   
+        .container {
+               max-width: 100%;
+               /* Add more mobile styles */
+           }
+           
+           body {
+               margin: 0vw;
+           }
+           
+           .group1 {
+              background: linear-gradient(250.55deg, #e9e9f5 0%, rgba(196,222,238,255) 35.6%);
+           }
+           
+           .group1-header {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+           }
+           
+           .group1-header .headerTel {
+               display: none;
+           }
+           
+           .group1-header .headerTel-mobile {
+               margin-left: 4vw;
+               margin-top: 4vw;
+               display: flex;
+               justify-content: space-between;
+           }
+           
+           .group1-header .logo {
+               position: absolute;
+               margin-top: 26vw;
+               left: 50%;
+               height: 28.889vw;
+               transform: translateX(-50%);
+           }
+           
+           .group1-header .menu-mobile {
+               margin-right: 2vw;
+               margin-top: 4vw;
+           }
+
+          
+        .group1 .group1-container .group1-left .group1Image {
+               width: 100%;
+               margin-top: 26.667vw;
+        }
+           
+           .group1 .group1-container .group1-right {
+               align-items: center;
+               text-align: center;
+           }
+           
+           .group1 .group1-container .group1-right .h1 {
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 12.252vw;
+               line-height: 10.889vw;
+               /* or 89% */
+               text-align: center;
+               color: #071E4F;
+           }
+           
+           .group1 .group1-container .group1-right .btnContact {
+               width: 47.111vw;
+               height: 11.778vw;
+               background: #4AC1E0;
+               border-radius: 1.778vw;
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 6.667vw;
+               line-height: 2.222vw;
+               text-align: center;
+               color: #FFFFFF;
+               border: none;
+           }
+           
+           .titleBarContainer {
+               text-align: center;
+               align-content: center;
+               margin-top: 6.667vw;
+               display: flex;
+               flex-direction: row-reverse;
+               justify-content: center;
+           }
+           
+           .titleBar {
+               box-sizing: border-box;
+               width: 20%;
+               height: 100%;
+               min-width: 25.556vw;
+               min-height: 22.222vw;
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 5.41vw;
+               line-height: 5.333vw;
+               /* or 100% */
+               margin: 3%;
+               text-align: center;
+               background: #FFFFFF;
+               border: 0.667vw solid #FFFFFF;
+               border-radius: 1.778vw;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               text-align: center;
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 4.444vw;
+               line-height: 5.333vw;
+               /* or 100% */
+               text-align: center;
+               color: #4966B0;
+               white-space: nowrap;
+           }
+           
+           .titleBar .titleBarPers {
+               font-size: 5.556vw;
+           }
+           
+           .titleBarText {
+               color: #071E4F;
+           }
+           
+           .titleBar:nth-child(1) {
+               color: #4AC1E0;
+               left: 1%;
+               /* or 100% */
+           }
+           
+           .titleBar:nth-child(2) {
+               color: #4966B0;
+           }
+           
+           .titleBar:nth-child(3) {
+               color: #4FB9B9;
+               right: 1%;
+           }
+           
+           .group2 {
+               background: #F0F3FB;
+               height: 100%;
+               padding-bottom: 11.111vw;
+           }
+           
+           .group2Text .div_text {
+               margin: 0vw;
+           }
+           
+           .group2 .group2Image {
+               width: 100%;
+           }
+           
+           .group2 .h2 {
+               margin-bottom: 4%;
+               margin-top: 4%;
+
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 8vw;
+               line-height: 8.889vw;
+               /* or 100% */
+               text-align: right;
+               color: #071E4F;
+           }
+           
+           .group2 div {
+              
+               font-family: 'Open Sans Hebrew';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 5vw;
+              
+               /* or 155% */
+               text-align: right !important;
+               color: #071E4F;
+               padding: 4%;
+           }
+
+           .group2 .group2Text {
+            /*width: 28.2vw;*/
+            font-family: 'Open Sans Hebrew';
+            font-style: normal;
+            font-weight: 400;
+          
+            /* or 155% */
+            text-align: right;
+            color: #071E4F;
+        
+        
+            /*top: 11.5vw;*/
+        }
+        
+           
+           .group3 {
+               background: #E6EAF9;
+               padding-bottom: 11.111vw;
+           }
+           
+           .group3 .group3Image {
+               width: 100%;
+           }
+           
+           .group3 .h2 {
+               margin: 4%;
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 8.889vw;
+               line-height: 8.889vw;
+               /* or 100% */
+               text-align: right;
+               color: #071E4F;
+           }
+           
+           .group3 .group3TextContainer {
+               margin-right: 4%;
+               text-align: right !important;
+               font-family: 'Open Sans Hebrew';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 4vw;
+               line-height: 7.556vw;
+               /* identical to box height, or 155% */
+               text-align: right;
+               color: #071E4F;
+               
+           }
+           
+           .group3TextContainer .group3Text img {
+               margin-left: 4%;
+               margin-bottom: -0.667vw;
+               height: 4.444vw;
+               width: 4.444vw;
+               text-align: center;
+           }
+           
+           .group4 {
+               background: #F0F3FB;
+               padding-bottom: 6.667vw;
+           }
+           
+           .group4_container {
+               position: relative;
+               overflow: hidden;
+               height: 100%;
+           }
+           
+           .group4_container .h2 {
+               margin-right: 4%;
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 8.889vw;
+               line-height: 8.889vw;
+               /* identical to box height, or 100% */
+               text-align: right;
+               color: #071E4F;
+           }
+           
+           .slider-container {
+               position: relative;
+               overflow: hidden;
+               display: flex;
+           }
+           
+           .slider {
+               display: flex;
+               overflow-x: scroll;
+               overflow: hidden;
+               scroll-snap-type: x mandatory;
+               -webkit-overflow-scrolling: touch;
+               height: auto;
+           }
+           
+           .slider-frame {
+               flex: 0 0 100%;
+               padding: 0vw;
+               scroll-snap-align: start;
+           }
+           
+           .slider-frame-mobile {
+               padding: 10vw;
+               text-align: right;
+               margin: 5vw;
+               background: #FFFFFF;
+               border-radius: 1.778vw;
+               font-family: 'Open Sans Hebrew';
+               font-style: normal;
+               font-weight: 200;
+               font-size: 4.3vw;
+               line-height: 6vw;
+               /* or 150% */
+               text-align: right;
+               color: #071E4F;
+           }
+           
+           .slider-frame-footer {
+               display: flex;
+               justify-content: space-between;
+               font-family: 'Open Sans Hebrew Condensed Normal';
+               font-style: normal;
+               text-align: right;
+               font-size: 5vw;
+               background-color: #FFFFFF;
+               border-radius: 1.778vw;
+           }
+           
+           .slider-frame-footer-name{
+            margin-top: 2vw;
+           }
+           .slider-navigation {
+               display: flex;
+               justify-content: center;
+               margin-top: 4.444vw;
+           }
+           
+           .prevBtn {
+               margin-left: 2.667vw;
+               top: 0%;
+               /* Adjust the positioning of the buttons vertically */
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-size: 5.333vw;
+               cursor: pointer;
+           }
+           
+           .nextBtn {
+               margin-right: 2.667vw;
+               /* Adjust the positioning of the next button */
+               top: 0%;
+               /* Adjust the positioning of the buttons vertically */
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-size: 5.333vw;
+               cursor: pointer;
+           }
+           
+           .line {
+               border: 0.3vw solid #EEF2F8;
+               transform: rotate(180deg);
+           }
+           
+           .group4-raiting {
+               display: block;
+               justify-content: space-between;
+               left: 7%;
+               right: 7%;
+               margin-left: 4%;
+               margin-right: 4%;
+               align-items: center;
+               justify-content: center;
+               text-align: center;
+               overflow: hidden;
+               border-radius: 1.778vw;
+           }
+           
+           .group4-raiting-item {
+               display: flex;
+               justify-content: space-between;
+               margin: 2.222vw;
+               padding-left: 6.667vw;
+               padding-right: 6.667vw;
+               height: 14vw;
+               /* Adjust this value based on your requirements */
+               text-align: center;
+               align-items: center;
+               background-color: #FFFFFF;
+               border-radius: 1.778vw;
+               /* identical to box height, or 160% */
+               font-family: 'Open Sans Hebrew Condensed normal';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 4.831vw;
+               line-height: 7.778vw;
+               /* identical to box height, or 160% */
+               text-align: right;
+               color: #071E4F;
+           }
+           
+           .group4-raiting-item img {
+               order: 1;
+               width: 129.996px;
+               /* Set the desired width for truncation */
+               height: auto;
+               /* Maintain aspect ratio */
+               object-fit: none;
+               /* Prevent resizing the image */
+               object-position: left;
+               /* Adjust the starting position of the image */
+               display: block;
+               /* Ensure the image is a block-level element */
+               overflow: hidden;
+               /* Hide any content exceeding the width */
+           }
+           
+           .group4-raiting-item div {
+               order: 2;
+           }
+           
+           .group4-raiting-item .div_text .vertical-line {
+               visibility: hidden;
+           }
+           
+           .btnAboutMe {
+               background: #4AC1E0;
+               border-radius: 1.778vw;
+               margin-top: 6.667vw;
+               margin-left: auto;
+               margin-right: auto;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 73.333vw;
+               height: 11.778vw;
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 6.667vw;
+               color: #FFFFFF;
+               border: none;
+           }
+           
+           .group5 {
+               width: 100%;
+           }
+           
+           .group5 .h2 {
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 8.889vw;
+               line-height: 8.889vw;
+               /* identical to box height, or 100% */
+               text-align: right;
+               color: #071E4F;
+               margin-right: 4%;
+           }
+           
+           .group5-img2 {
+               width: 100%;
+           }
+           
+           .group5-img3 {
+               width: 100%;
+           }
+           
+           .group5-right {
+               text-align: right;
+               margin-right: 0vw;
+               background: #FFFFFF;
+           }
+           
+           .accordion {
+               background: #FFFFFF;
+               position: relative;
+               list-style-type: none;
+               margin-top: 4.444vw;
+               margin-right: 4%;
+               padding-inline-start: 1.111vw;
+               justify-content: center;
+           }
+           
+           .accordion-toggle {
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               text-align: center;
+               white-space: nowrap;
+               border: none;
+               cursor: pointer;
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 500;
+               font-size: 5.111vw;
+               line-height: 16.889vw;
+               background: #FFFFFF;
+               
+               justify-content: center;
+           }
+           
+           .accordion-toggle .left {
+               justify-content: right;
+               background-color: #3BA8C3;
+           }
+           
+           .accordion-toggle img {
+               margin-left: 3.333vw;
+               text-align: center;
+           }
+           
+           .accordion-content {
+               display: none;
+           }
+           
+           .accordion-content.active {
+               display: block;
+               font-family: 'Open Sans Hebrew';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 4.889vw;
+               line-height: 7.556vw;
+               background-color: #fff;
+               
+           }
+           
+           .lineBlk {
+               border: 0.222vw solid #000000;
+               height: 0vw;
+           }
+           
+           .group5-img1-mobile {
+               width: 100%;
+           }
+           
+           .group5-img1 {
+               display: none;
+           }
+           
+           .group6 {
+               /*210.889vw;*/
+               width: 100%;
+               background: linear-gradient(250.55deg, #E4E4F9 0%, #E3F8FB 55.6%);
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 7.778vw;
+               line-height: 10vw;
+               /* or 129% */
+               text-align: center;
+               color: #071E4F;
+               display: flex;
+           }
+           
+           .poligon1_2 {
+               margin-right: 40%;
+               margin-top: -2.222vw;
+               width: 20%;
+           }
+           
+           .poligon3_2 {
+               margin-top: 1%;
+               margin-left: 30%;
+               width: 10%;
+           }
+           
+           .poligon2_2 {
+               margin-top: 0%;
+               width: 18%;
+           }
+           
+           .poligon4_2 {
+               margin-bottom: 20%;
+               width: 11%;
+               margin-left: 30%;
+           }
+           
+           .table-group6 {
+               display: flex;
+               flex-direction: column;
+           }
+           
+           .table-group6 tr {
+               display: block;
+           }
+           
+           .table-group6-center {
+               margin-left: 11.111vw;
+               margin-right: 11.111vw;
+           }
+           
+           .table-group6 td {
+               display: block;
+               margin-bottom: 2.222vw;
+               /* Add some spacing between the table cells */
+           }
+           
+           .about {
+               background-color: #FFFFFF;
+           }
+           
+           .about h2 {
+               margin-right: 4%;
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 8.889vw;
+               line-height: 8.889vw;
+               /* identical to box height, or 100% */
+               text-align: right;
+               color: #071E4F;
+           }
+           
+           .about p {
+               font-family: 'Open Sans Hebrew';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 5vw;
+             
+               text-align: right;
+               color: #071E4F;
+               margin-left: 4%;
+               margin-right: 4%;
+           }
+           
+           .about .img-mobile {
+               width: 100%;
+           }
+           
+           .about .img-desktop {
+               display: none;
+           }
+           
+        
+           .about .btnContact {
+               position: relative;
+               margin-top: 11.111vw;
+               width: 47.111vw;
+               height: 11.778vw;
+               background: #4AC1E0;
+               border-radius: 1.778vw;
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 6.667vw;
+               line-height: 2.222vw;
+               color: #FFFFFF;
+               border: none;
+               align-items: center;
+               text-align: center;
+               left: 50%;
+               margin-left: -23.556vw;
+           }
+           
+           @media (max-width: 170.667vw) {
+               .slider-frame-footer {
+                   display: block;
+               }
+           }
+           
+           .slide2-container {
+               position: relative;
+               overflow: hidden;
+               display: flex;
+               padding-top: 5%;
+               padding-bottom: 5%;
+           }
+           
+           .slider2 {
+               display: flex;
+               overflow-x: scroll;
+               overflow: hidden;
+               scroll-snap-type: x mandatory;
+               -webkit-overflow-scrolling: touch;
+               height: auto;
+           }
+           
+           .slider-frame2 {
+               flex: 0 0 100%;
+               padding: 0vw;
+               scroll-snap-align: start;
+           }
+           
+           .slider2-frame-mobile {
+               padding: 4.444vw;
+               text-align: right;
+               margin: 11.111vw;
+               background: #FFFFFF;
+               border-radius: 1.778vw;
+               font-family: 'Open Sans Hebrew';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 4vw;
+               line-height: 6.667vw;
+               /* or 150% */
+               text-align: right;
+               color: #071E4F;
+           }
+           /*        
+        .slide2-container .prevBtn2 {
+            position: absolute;
+            z-index: 9999;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0;
+        }
+*/
+           
+           .slide2-container .prevBtn2 {
+               position: absolute;
+               z-index: 9999;
+               top: 50%;
+               transform: translate(0, -50%);
+               left: 0;
+               width: 11.111vw;
+               height: 11.111vw;
+               
+               background-repeat: no-repeat;
+               background-size: 100% 100%;
+           }
+          
+           
+           .slide2-container .nextBtn2 {
+               position: absolute;
+               z-index: 9999;
+               top: 50%;
+               transform: translate(0, -50%);
+               right: 0;
+               width: 11.111vw;
+               height: 11.111vw;
+               
+               background-repeat: no-repeat;
+               background-size: 100% 100%;
+           }
+           
+           .slider-frame2 img {
+               width: 100%;
+           }
+           
+           .group-tsiuyd {
+               position: relative;
+               background: linear-gradient(153.74deg, #E4E4F9 13.6%, rgba(227, 248, 251, 0.26) 52.76%);
+           }
+           
+           .group-tsiuyd .top {
+               padding-top: 4.444vw;
+               text-align: right;
+           }
+           
+           .group-tsiuyd .text-left-moble {
+               padding: 4%;
+           }
+           
+           .group-tsiuyd .top .text-left .h2 {
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 8.889vw;
+               line-height: 8.889vw;
+               /* or 100% */
+               text-align: right;
+               color: #071E4F;
+           }
+           
+           .group-tsiuyd .top .text-left .h3 {
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 5vw;
+               text-align: right;
+               color: #071E4F;
+               padding-right: 4%;
+           }
+           
+           .group-tsiuyd .top .text-left .text {
+               font-family: 'Open Sans Hebrew';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 5vw;
+               text-align: right;
+               color: #071E4F;
+               padding-right: 4%;
+           }
+           
+           .group-tsiuyd .top .img-right {
+               display: none;
+           }
+           
+           .group-tsiuyd .text-left .img-mobile {
+               width: 100%;
+           }
+           
+           .group-tsiuyd .top .img {
+               display: none;
+           }
+           
+           .bottom .img {
+               width: 100%;
+           }
+           
+           .bottom .textBox {
+               padding: 4%;
+               text-align: right;
+               margin-left: 10vw;
+               margin-bottom: 15vw;
+           }
+           
+           .bottom .textBox .h2 {
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 8.889vw;
+               line-height: 8.889vw;
+               /* identical to box height, or 100% */
+               text-align: right;
+               color: #071E4F;
+           }
+           
+           .bottom .textBox .text {
+               font-family: 'Open Sans Hebrew';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 5vw;
+               text-align: right;
+               color: #071E4F;
+               
+           }
+           
+           .bottom .img {
+               display: none;
+           }
+           
+           .bottom .img-klinika {
+               width: 100%;
+           }
+           
+           .group-contact {
+               position: relative;
+               width: 100%;
+               padding-bottom: 11.111vw;
+               background-size: cover;
+               /* Adjust as needed */
+               background-position: center;
+               background-color: #C9E3F0;
+               /* Adjust as needed */
+           }
+           
+          
+           .group-contact .img-mobile {
+                background-repeat: no-repeat;
+                background-size: 160.444vw;
+                height: 66.667vw;
+            }
+        
+
+           .group-contact .h2-mobile {
+               color: #071E4F;
+               text-align: right;
+               font-size: 6.889vw;
+               font-family: Open Sans Hebrew Condensed;
+               font-weight: 700;
+               line-height: 11.111vw;
+               margin-right: 4%;
+               padding-top: 4%;
+           }
+           
+           .group-contact .text {
+               margin-right: 4%;
+               font-family: 'Open Sans Hebrew';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 5vw;
+               line-height: 6.444vw;
+               /* or 132% */
+               text-align: right;
+               color: #071E4F;
+               margin-top: 6.667vw;
+               margin-left: 20vw;
+           }
+           
+           .h2-desktop .h2 {
+               display: none;
+           }
+           
+           .contact {
+               text-align: right;
+           }
+           
+           #emailForm {
+               margin-right: 10%;
+               margin-left: 10%;
+               /* Adjust the width as needed */
+               margin-top: 0vw;
+               width: 80%;
+               text-align: center;
+               /* Center the form horizontally */
+           }
+           /* CSS styles for the form input fields */
+           
+           #emailForm input[type="text"],
+           #emailForm input[type="email"],
+           #emailForm textarea {
+               width: 100%;
+               padding-top: 5.556vw;
+               /* Adjust the padding as needed */
+               border: none;
+               border-bottom: 0.222vw solid #071E4F;
+               /* Add an underline */
+               background: transparent;
+               /* Make the background transparent */
+               outline: none;
+               /* Remove the default focus outline */
+               text-align: center;
+               font-family: 'Open Sans Hebrew';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 4.889vw;
+               line-height: 6.222vw;
+               /* identical to box height, or 127% */
+               color: #071E4F;
+           }
+           /* CSS styles for the form submit button */
+           
+           #emailForm button[type="send"] {
+               /* Add your desired background color */
+               width: 47.111vw;
+               height: 11.778vw;
+               margin-top: 11.111vw;
+               background: #4AC1E0;
+               border-radius: 1.778vw;
+               position: relative;
+               font-family: 'Open Sans Hebrew Condensed';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 6.667vw;
+               color: #FFFFFF;
+               border: none;
+           }
+           /* CSS styles for the form submit button on hover */
+           
+           #emailForm button[type="send"]:hover {
+               background-color: #3BA8C3;
+               /* Add your desired hover background color */
+           }
+           /* CSS styles for the group-call section */
+           
+           .group-call {
+               position: relative;
+               width: 100%;
+               height: 100%;
+               padding-top: 3.111vw;
+               padding-bottom: 3.111vw;
+               /* Set the height of the bottom div */
+               background: #071E4F;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+           }
+           
+          /* .XXgroup-call*/ 
+           .imgWA {
+               margin-right: 11.111vw;
+           }
+           
+           .contact-mobile {
+               background-color: #C9E3F0;
+               position: relative;
+               height: 100%;
+           }
+
+
+           
+.image-button {
+    width: 47.111vw;
+    height: 11.778vw;
+    margin-top: 11.111vw;
+    background: #4AC1E0;
+    border-radius: 1.778vw;
+    position: relative;
+    font-family: 'Open Sans Hebrew Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6.667vw;
+    color: #FFFFFF;
+    border: none;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+   }
+
+  .image-button img {
+    margin-right: 8vw;
+    width: 7vw;
+  }
+
+  .points-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0vw;
+    padding-bottom: 8vw;
+  }
+  
+  .point {
+    width: 3.111vw;
+    height: 3.111vw;
+    background-color: #E4E4F9;
+    border-radius: 50%;
+    margin: 0 5.004px;
+  }
+
+  .point2 {
+    width: 3.111vw;
+    height: 3.111vw;
+    background-color: #E4E4F9;
+    border-radius: 50%;
+    margin: 0 5.004px;
+  }
+
+
+  .active {
+    background-color: #476CB6;
+  }
+
+
+  .nextBtn{
+    display: none;
+    
+  }
+  .prevBtn{
+    
+    display: none;
+  }
