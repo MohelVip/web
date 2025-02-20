@@ -247,7 +247,7 @@
     }
    
     //Mobile Menu
-    document.addEventListenerX('click', function(event) {
+    document.addEventListener('click', function(event) {
       var menuContainer = document.querySelector('.menu-side-mobile');
       var toggleButton = document.querySelector('.toggle-button');
       
@@ -256,13 +256,13 @@
       }
     });
       
-    function toggleMenuX() {
+    function toggleMenu() {
       var menuContainer = document.querySelector('.menu-side-mobile');
       menuContainer.classList.toggle('show');
       window.addEventListener('scroll', closeMenuOnScroll);
     }
 
-    function closeMenuOnScrollX() {
+    function closeMenuOnScroll() {
       var menuContainer = document.querySelector('.menu-side-mobile');
       menuContainer.classList.remove('show');
       window.removeEventListener('scroll', closeMenuOnScroll);
