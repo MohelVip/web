@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מִזְמוֹר לְתוֹדָה</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-color: #111;
+      --bg-color: #ffffff;
+      --button-bg: #003366;
+      --button-color: white;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-color: #f0f0f0;
+        --bg-color: #1e1e1e;
+        --button-bg: #0077cc;
+        --button-color: #fff;
+        --shadow: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Serif Hebrew', serif;
+      background: var(--bg-color) url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+      color: var(--text-color);
+      padding: 1.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: right;
+      background-size: cover;
+      animation: fadeInBody 1s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 2.4em;
+      color: var(--button-bg);
+      text-align: center;
+      margin-bottom: 1em;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .verse {
+      font-size: 1.8em;
+      line-height: 1.8;
+      margin-bottom: 1.2em;
+      padding: 0 0.5em;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2em;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-link img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .logo-link:hover img {
+      transform: scale(1.05);
+    }
+
+    .logo-text {
+      margin-top: 0.7em;
+      font-size: 1.3em;
+      color: var(--button-bg);
+    }
+
+    .subtext {
+      margin-top: 0.2em;
+      font-size: 1em;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      .verse { font-size: 1.6em; }
+      .logo-text { font-size: 1.2em; }
+      .subtext { font-size: 0.95em; }
+    }
+  </style>
+</head>
+<body>
+  <h1>מִזְמוֹר לְתוֹדָה</h1>
+
+  <div class="verse">מִזְמוֹר לְתוֹדָה, הָרִיעוּ לַיהוָה כָּל הָאָרֶץ.</div>
+  <div class="verse">עִבְדוּ אֶת־יְהוָה בְּשִׂמְחָה, בֹּאוּ לְפָנָיו בִּרְנָנָה.</div>
+  <div class="verse">דְּעוּ כִּי יְהוָה הוּא אֱלֹהִים; הוּא עָשָׂנוּ וְלוֹ אֲנַחְנוּ — עַמּוֹ וְצֹאן מַרְעִיתוֹ.</div>
+  <div class="verse">בֹּאוּ שְׁעָרָיו בְּתוֹדָה — חֲצֵרוֹתָיו בִּתְהִלָּה; הוֹדוּ לוֹ, בָּרְכוּ שְׁמוֹ.</div>
+  <div class="verse">כִּי טוֹב יְהוָה — לְעוֹלָם חַסְדּוֹ; וְעַד דֹּר וָדֹר אֱמוּנָתוֹ.</div>
+
+  <a href="https://www.mohel.vip" class="logo-link">
+    <img src="https://www.mohel.vip/img/LogoSmall.png" alt="Mohel Logo">
+    <div class="logo-text">נולד לכם בן?</div>
+    <div class="subtext">מוזמנים באהבה לליווי אישי ומקצועי ›</div>
+  </a>
+</body>
+</html>
