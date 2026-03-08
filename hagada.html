@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>הגדה של פסח – ברית יעקב</title>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Suez+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Suez+One&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -45,68 +45,82 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* --- 3 המלצות עליונות משודרגות --- */
+        /* שלוש המלצות בולטות - 3 בשורה */
         .top-recommendations {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
-        .quote-card {
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 240px;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.05);
-            position: relative;
+        .quote-link {
             text-decoration: none;
             color: inherit;
+            display: flex;
+            transition: transform 0.2s;
         }
 
-        .quote-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        .quote-link:hover { transform: translateY(-5px); }
+
+
+        /* פסים צבעוניים למעלה */
+        .card-weiss { background: #fffaf0; border-top: 6px solid var(--gold); }
+        .card-neugershel { background: #fdf5f5; border-top: 6px solid var(--wine); }
+        .card-finkel { background: #f6f9fc; border-top: 6px solid #2c3e50; }
+
+    /* --- עיצוב קומפקטי עם פס עליון צבעוני --- */
+    .top-recommendations {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .quote-card {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+        transition: transform 0.3s;
+        min-height: 160px; /* גובה מצומצם */
+        border: 1px solid #eee;
+        border-top-width: 6px; /* עובי הפס העליון */
+        box-sizing: border-box;
+    }
+
+    .quote-card:hover { transform: translateY(-3px); }
+
+    /* החזרת הצבעים לפסים העליונים */
+    .card-weiss { border-top-style: solid; border-top-color: var(--gold); background: #fffaf0; }
+    .card-neugershel { border-top-style: solid; border-top-color: var(--wine); background: #fdf5f5; }
+    .card-finkel { border-top-style: solid; border-top-color: #2c3e50; background: #f6f9fc; }
+
+    .quote-text { 
+        font-size: 16px; 
+        font-weight: 700;
+        color: #222;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .quote-author { 
+        font-weight: bold; 
+        color: var(--wine); 
+        font-size: 13px; 
+        border-top: 1px solid rgba(0,0,0,0.08); 
+        padding-top: 8px; 
+        margin-top: auto; /* דוחף את שם הרב לתחתית הכרטיס */
+    }        /* כפתור "כל ההמלצות" - הבטחת מרחק */
+        .all-recs-btn-wrapper { 
+            text-align: center; 
+            margin: 40px 0 60px 0; 
+            clear: both;
         }
-
-        .card-1 { background-color: #fffaf0; border-top: 5px solid var(--gold); }
-        .card-2 { background-color: #fdf5f5; border-top: 5px solid var(--wine); }
-        .card-3 { background-color: #f6f9fc; border-top: 5px solid #2c3e50; }
-
-        .quote-text {
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.5;
-            color: #222;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .quote-text::before {
-            content: '"';
-            font-family: 'Suez One', serif;
-            font-size: 60px;
-            color: rgba(0,0,0,0.05);
-            position: absolute;
-            top: -30px;
-            right: -10px;
-            z-index: -1;
-        }
-
-        .quote-author {
-            font-weight: 700;
-            color: var(--wine);
-            font-size: 15px;
-            border-top: 1px solid rgba(0,0,0,0.1);
-            padding-top: 15px;
-        }
-
-        .all-recs-btn-wrapper { text-align: center; margin: 20px 0 50px 0; }
+        
         .all-recs-btn {
             display: inline-block;
             padding: 14px 35px;
@@ -119,182 +133,235 @@
             transition: 0.3s;
         }
 
-        /* --- חלק מה מיוחד: כריכה לצד טקסט --- */
-        .intro-section {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-            margin: 50px 0;
+        .all-recs-btn:hover { background: #5a0000; transform: scale(1.05); }
+        
+        h2 {
+            font-family: 'Suez One', serif;
+            color: var(--wine);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+            margin-top: 40px;
         }
 
-        .intro-cover { flex: 1; text-align: center; min-width: 260px; }
-        .intro-cover img {
-            width: 100%;
-            max-width: 280px;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .intro-text { flex: 1.8; }
-        h2 { font-family: 'Suez One', serif; color: var(--wine); margin: 0 0 15px 0; }
-
-        .feature-item-new {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-        .feature-item-new b { color: #000; }
-        .check-mark { color: var(--gold); font-weight: bold; font-size: 18px; }
-
-        .page-sample-section {
+        .image-box {
             background: #f9f9f9;
-            padding: 30px;
-            border-radius: 12px;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
             text-align: center;
-            margin: 40px 0;
         }
-        .page-sample-section img { max-width: 100%; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
-        /* גלריה סופית */
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .sources { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .source-list { background: #fcfcfc; padding: 20px; border-radius: 8px; border: 1px solid #eee; }
+        .source-list ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; }
+        .source-list li::before { content: "• "; color: var(--gold); font-weight: bold; }
+
+        /* גלריה מלאה - 3 בשורה */
         .full-gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
+            margin-top: 30px;
         }
-        .gallery-item { text-align: center; padding: 10px; border: 1px solid #eee; border-radius: 8px; }
-        .gallery-item img { width: 100%; cursor: zoom-in; border-radius: 4px; }
-        .gallery-item p { font-size: 14px; font-weight: bold; margin-top: 10px; color: #555; }
 
-        #lightbox {
-            display: none; position: fixed; z-index: 9999; top: 0; left: 0; 
-            width: 100%; height: 100%; background: rgba(0,0,0,0.9);
-            justify-content: center; align-items: center; cursor: zoom-out;
+        .gallery-item {
+            text-align: center;
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: 0.3s;
         }
-        #lightbox img { max-width: 90%; max-height: 90%; border: 2px solid white; }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            cursor: zoom-in;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item p { font-size: 14px; margin-top: 12px; font-weight: bold; color: #444; min-height: 40px; }
+
+        /* מודל להגדלת תמונה */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            justify-content: center; align-items: center;
+            cursor: zoom-out;
+        }
+        #lightbox img { max-width: 95%; max-height: 95%; border: 3px solid white; }
 
         .contact-box {
-            background: #fff8f8; border: 2px dashed #e2b6b6;
-            padding: 30px; text-align: center; margin-top: 50px; border-radius: 15px;
+            background: #fff8f8;
+            border: 2px dashed #e2b6b6;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+            border-radius: 15px;
         }
+
         .phone { font-size: 35px; font-weight: bold; color: var(--wine); text-decoration: none; }
 
         @media (max-width: 850px) {
             .top-recommendations, .full-gallery { grid-template-columns: repeat(2, 1fr); }
-            .intro-section { flex-direction: column; text-align: center; }
         }
+
         @media (max-width: 600px) {
-            .top-recommendations, .full-gallery { grid-template-columns: 1fr; }
+            .sources, .top-recommendations, .full-gallery { grid-template-columns: 1fr; }
+            .container { padding: 20px; }
             header h1 { font-size: 32px; }
+        }
+
+        @media (max-width: 768px) {
+            .intro-section {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            .feature-item-new {
+                text-align: right;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>הגדה של פסח "ברית יעקב"</h1>
-    <p>עומק הראשונים ובהירות האחרונים בכרך אחד</p>
+    <h1>הגדת "ברית יעקב": ביאורי גדולי הראשונים והאחרונים ב"צורת הדף"</h1>
+    <p>ליקוט מזוקק בלשון המקור, ערוך ומסודר בבהירות להבנה פנימית ומקיפה של סדר ההגדה</p>
+    
 </header>
 
 <div class="container">
 
     <div class="top-recommendations">
-        <a href="#rec-weiss" class="quote-card card-1">
+        <a href="#rec-weiss" class="quote-card card-weiss">
             <div class="quote-text">"הספר הנפלא ... מיוחד הוא בסגנונו וסידורו, והקורא ימצא בו חפץ בקל. בטוחני שתועלת גדולה יפיקו רבים מספר נפלא זה"</div>
-            <div class="quote-author">הגאון הגדול רבי אשר וייס שליט"א</div>
+            <div class="quote-author">⎯  הגאון הגדול רבי אשר וייס שליט"א</div>
         </a>
 
-        <a href="#rec-neugershel" class="quote-card card-2">
+        <a href="#rec-neugershel" class="quote-card card-neugershel">
             <div class="quote-text">"מהדורה חדשה זו מעשה אמן... הופכת את הדברים לראויים להיאמר ליד שלחן הסדר..."</div>
-            <div class="quote-author">הגאון הגדול רבי מרדכי דוד נויגרשל שליט"א</div>
+            <div class="quote-author">⎯  הגאון הגדול רבי מרדכי דוד נויגרשל שליט"א</div>
         </a>
 
-        <a href="#rec-finkel" class="quote-card card-3">
+        <a href="#rec-finkel" class="quote-card card-finkel">
             <div class="quote-text">"ניכרת ההשקעה הגדולה להגיש את דברי רבותינו בצורה השווה לכל נפש, דבר דבור על אופניו."</div>
-            <div class="quote-author">הגאון הצדיק רבי בנימין פינקל שליט"א</div>
+            <div class="quote-author">⎯  הגאון הצדיק רבי בנימין פינקל שליט"א</div>
         </a>
     </div>
 
     <div class="all-recs-btn-wrapper">
-        <a href="#all-recommendations" class="all-recs-btn">צפו בכל מכתבי ההמלצה ←</a>
+        <a href="#all-recommendations" class="all-recs-btn">לצפייה בכל ההסכמות וברכות גדולי ישראל ←</a>
     </div>
 
-    <div class="intro-section">
-        <div class="intro-cover">
-            <img src="https://mohel.vip/hagada/cover.jpg" alt="כריכת הגדה">
+    <div class="intro-section" style="display: flex; gap: 20px; align-items: center; margin-top: 30px; overflow: hidden;">
+        
+        <div class="intro-cover" style="flex: 1; text-align: center; min-width: 250px;">
+            <img src="https://mohel.vip/hagada/cover.jpg" alt="כריכת הגדת ברית יעקב" style="width: 100%; max-width: 280px; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee;">
         </div>
-        <div class="intro-text">
-            <h2>מה מיוחד בהגדת "ברית יעקב"?</h2>
-            <div class="feature-item-new">
-                <span class="check-mark">✓</span>
-                <span><b>מבנה עמוד חדשני:</b> לשון ההגדה במרכז, וכל המפרשים סביבה במבט אחד.</span>
-            </div>
-            <div class="feature-item-new">
-                <span class="check-mark">✓</span>
-                <span><b>דברי הראשונים בלשונם:</b> הבאת דברי רבותינו כפי שכתבו אותם, בדיוק ובבהירות.</span>
-            </div>
-            <div class="feature-item-new">
-                <span class="check-mark">✓</span>
-                <span><b>סיכום דברי האחרונים:</b> תמצית ברורה המנגישה רעיונות עמוקים לכל נפש.</span>
-            </div>
-            <div class="feature-item-new">
-                <span class="check-mark">✓</span>
-                <span><b>דיוק והשוואה:</b> ציון מפרשים המסכימים עם אותו רעיון ללא כפילות.</span>
-            </div>
-            <div class="feature-item-new">
-                <span class="check-mark">✓</span>
-                <span><b>הכל תחת ידכם:</b> כל הפסוקים הנצרכים באותו עמוד - ללא צורך לדפדף.</span>
-            </div>
-            <div class="feature-item-new">
-                <span class="check-mark">✓</span>
-                <span><b>תרשימים והמחשות:</b> כלים ויזואליים להבנה מהירה של סוגיות מורכבות.</span>
+
+        <div class="intro-text" style="flex: 1.5;">
+            <h2 style="margin: 0 0 10px 0; font-size: 28px;">מה מיוחד בהגדת "ברית יעקב"?</h2>
+            <p style="margin-bottom: 15px; font-size: 16px;">הגדה המאפשרת להפוך את ליל הסדר מחוויה של "אמירה" ללימוד מעמיק וחיבור למקורות, ללא צורך בערימת ספרים על השולחן.</p>
+            
+
+    <div class="features-list" style="display: flex; flex-direction: column; gap: 12px;">
+        
+        <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+            <span style="color: var(--gold); font-weight: bold;">✓</span>
+            <span><b>"צורת הדף" ייחודית:</b> לשון ההגדה במרכז, כשסביבה מסודרים המפרשים במבט אחד: <b>הראשונים בפנים, האחרונים בחוץ והפסוקים בתחתית העמוד.</b></span>
+        </div>
+
+        <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+        <span style="color: var(--gold); font-weight: bold;">✓</span>
+        <span><b>סיכום דברי הראשונים:</b> הבאת דברי רבותינו 
+            <span style="color: var(--wine); font-weight: 700;">(פירוש קדמון, רש"י, רשב"ם, ראב"ן, ר"י בן יקר, רי"ד, שבלי הלקט, ריטב"א, ארחות חיים, אבודרהם, רשב"ץ)</span> 
+            בלשונם המקורית והמתומצתת; במקרה של דעות דומות, מובא הפירוש הבהיר ביותר עם ציון המפרשים המסכימים עמו.
+        </span>
+    </div>
+
+    <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+        <span style="color: var(--gold); font-weight: bold;">✓</span>
+        <span><b>תמצית דברי האחרונים:</b> ליקוט פנינים מגדולי האחרונים 
+            <span style="color: var(--wine); font-weight: 700;">מהר"ל, נודע ביהודה-צל"ח, הגר"א, הפלאה, חתם סופר, מלבי"ם, אמרי שפר-הנצי"ב מוולוז'ין, ליל שמורים-ערוך השולחן</span> 
+            המנגישים רעיונות עמוקים בשפה ברורה לכל נפש.
+        </span>
+    </div>
+
+    <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+        <span style="color: var(--gold); font-weight: bold;">✓</span>
+        <span><b>הכל תחת ידכם:</b> כל הפסוקים הנצרכים מופיעים בגוף העמוד - אין צורך לפתוח חומשים או לדפדף באמצע הסדר.</span>
+    </div>
+
+    <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+        <span style="color: var(--gold); font-weight: bold;">✓</span>
+        <span><b>תרשימים והמחשות:</b> כלים ויזואליים להבנה מהירה של מבנה ההגדה ומהלכים מורכבים.</span>
+    </div>
+
+</div>
+
+
+
             </div>
         </div>
     </div>
 
-    <div class="page-sample-section">
-        <h3>מבנה העמוד - הכל פרוס לפניכם</h3>
-        <img src="https://mohel.vip/hagada/page-example.jpg" alt="עמוד דוגמה">
+    <div class="image-box">
+        <p><b>מבנה העמוד - הכל במקום אחד, ללא צורך לדפדף</b></p>
+        <img src="https://mohel.vip/hagada/page-example.jpg" alt="עמוד דוגמה מתוך ההגדה">
     </div>
 
-    <h2 id="all-recommendations" style="text-align: center; border: none; margin-bottom: 30px;">מכתבי ההמלצה המלאים</h2>
+    <h2 id="all-recommendations">הסכמות וברכות גדולי ישראל</h2>
+    <p style="text-align: center;">לחצו על תמונה כדי להגדיל ולקרוא:</p>
+    
     <div class="full-gallery">
-        <div class="gallery-item">
-            <img src="https://mohel.vip/hagada/recommend/%D7%94%D7%9E%D7%9C%D7%A6%D7%94%20%D7%A8%D7%91%20%D7%A0%D7%91%D7%A0%D7%A6%D7%9C.png" onclick="openLightbox(this.src)">
-            <p>הגר"א נבנצל שליט"א</p>
+        <div class="gallery-item" id="rec-weiss">
+            <img src="/hagada/recommend/רב_נבנצל.png" onclick="openLightbox(this.src)">
+            <p>הגאון הגדול רבי אביגדור נבנצל שליט"א</p>
         </div>
         <div class="gallery-item">
-            <img src="https://mohel.vip/hagada/recommend/%D7%94%D7%9E%D7%9C%D7%A6%D7%94%20%D7%A8%D7%91%20%D7%92%D7%A0%D7%A5.jpg" onclick="openLightbox(this.src)">
-            <p>הגר"י גנס שליט"א</p>
+            <img src="/hagada/recommend/רב_גנץ.jpg" onclick="openLightbox(this.src)">
+            <p>הגאון הגדול רבי ישראל גנס שליט"א</p>
         </div>
-        <div class="gallery-item" id="rec-weiss-full">
-            <img src="https://mohel.vip/hagada/recommend/%D7%94%D7%9E%D7%9C%D7%A6%D7%94%20%D7%A8%D7%91%20%D7%95%D7%99%D7%99%D7%A1.jpg" onclick="openLightbox(this.src)">
-            <p>הגר"א וייס שליט"א</p>
-        </div>
-        <div class="gallery-item">
-            <img src="https://mohel.vip/hagada/recommend/%D7%90%D7%93%D7%9E%D7%95%D7%A8%20%D7%9D%D7%A7%D7%A8%D7%90%D7%9C%D7%99%D7%9F.jpg" onclick="openLightbox(this.src)">
-            <p>האדמו"ר מקארלין שליט"א</p>
-        </div>
-        <div class="gallery-item" id="rec-finkel-full">
-            <img src="https://mohel.vip/hagada/recommend/%D7%94%D7%9E%D7%9C%D7%A6%D7%94%20%D7%A8%D7%91%20%D7%A4%D7%99%D7%A0%D7%A7%D7%9C.jpg" onclick="openLightbox(this.src)">
-            <p>הגר"ב פינקל שליט"א</p>
+        <div class="gallery-item" id="rec-finkel">
+            <img src="/hagada/recommend/רב_וייס.jpg" onclick="openLightbox(this.src)">
+            <p>הגאון הגדול רבי אשר זעליג וייס שליט"א</p>
         </div>
         <div class="gallery-item">
-            <img src="https://mohel.vip/hagada/recommend/%D7%90%D7%93%D7%9E%D7%95%D7%A8%20%D7%9E%D7%A1%D7%A8%D7%98%D7%A2%D7%98%D7%99%D7%9F.jpg" onclick="openLightbox(this.src)">
-            <p>האדמו"ר מסטרעטין שליט"א</p>
+            <img src="/hagada/recommend/אדמור_מקראלין.jpg" onclick="openLightbox(this.src)">
+            <p>האדמו"ר מקארלין</p>
         </div>
-        <div class="gallery-item" id="rec-neugershel-full">
-            <img src="https://mohel.vip/hagada/recommend/%D7%94%D7%9E%D7%9C%D7%A6%D7%94%20%D7%A8%D7%91%20%D7%0D%D7%99%D7%92%D7%A8%D7%A9%D7%9C.jpg" onclick="openLightbox(this.src)">
-            <p>הגר"מ נויגרשל שליט"א</p>
-        </div>
-        <div class="gallery-item">
-            <img src="https://mohel.vip/hagada/recommend/%D7%94%D7%9E%D7%9C%D7%A6%D7%94%20%D7%A8%D7%91%20%D7%96%D7%99%D7%9C%D7%91%D7%A8%D7%9E%D7%9F.jpg" onclick="openLightbox(this.src)">
-            <p>הגר"א זילברמן שליט"א</p>
+        <div class="gallery-item" id="rec-finkel">
+            <img src="/hagada/recommend/רב_פינקל.jpg" onclick="openLightbox(this.src)">
+            <p>הגאון הצדיק רבי בנימין פינקל שליט"א</p>
         </div>
         <div class="gallery-item">
-            <img src="https://mohel.vip/hagada/recommend/%D7%94%D7%9E%D7%9C%D7%A6%D7%94%20%D7%A8%D7%91%20%D7%A4%D7%9C%D7%92.jpg" onclick="openLightbox(this.src)">
-            <p>הגר"מ פלג שליט"א</p>
+            <img src="/hagada/recommend/אדמור_מסטרעטין.jpg" onclick="openLightbox(this.src)">
+            <p>האדמו"ר מסטרעטין</p>
+        </div>
+        <div class="gallery-item" id="rec-neugershel">
+            <img src="/hagada/recommend/רב_נויגרשל.jpg" onclick="openLightbox(this.src)">
+            <p>הגאון הגדול רבי מרדכי נויגרשל שליט"א</p>
+        </div>
+       
+        <div class="gallery-item">
+            <img src="/hagada/recommend/רב_זילברמן.jpg" onclick="openLightbox(this.src)">
+            <p>הגאון רבי אליהו זילברמן שליט"א</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/hagada/recommend/רב_פלג.jpg" onclick="openLightbox(this.src)">
+            <p>הגאון רבי מיכאל פלג שליט"א</p>
         </div>
     </div>
 
@@ -314,5 +381,4 @@
     }
 </script>
 
-</body>
-</html>
+<footer style="text-align: center; color: #888; padding-bottom: 30
