@@ -62,21 +62,59 @@
 
         .quote-link:hover { transform: translateY(-5px); }
 
-        .quote-card {
-            background: #fff9f0;
-            border-right: 4px solid var(--gold);
-            padding: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
 
-        .quote-text { font-size: 16px; font-style: italic; margin-bottom: 15px; flex-grow: 1; }
-        .quote-author { font-weight: bold; color: var(--wine); font-size: 15px; border-top: 1px solid #eee; padding-top: 10px; }
+        /* פסים צבעוניים למעלה */
+        .card-weiss { background: #fffaf0; border-top: 6px solid var(--gold); }
+        .card-neugershel { background: #fdf5f5; border-top: 6px solid var(--wine); }
+        .card-finkel { background: #f6f9fc; border-top: 6px solid #2c3e50; }
 
-        /* כפתור "כל ההמלצות" - הבטחת מרחק */
+    /* --- עיצוב קומפקטי עם פס עליון צבעוני --- */
+    .top-recommendations {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .quote-card {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+        transition: transform 0.3s;
+        min-height: 160px; /* גובה מצומצם */
+        border: 1px solid #eee;
+        border-top-width: 6px; /* עובי הפס העליון */
+        box-sizing: border-box;
+    }
+
+    .quote-card:hover { transform: translateY(-3px); }
+
+    /* החזרת הצבעים לפסים העליונים */
+    .card-weiss { border-top-style: solid; border-top-color: var(--gold); background: #fffaf0; }
+    .card-neugershel { border-top-style: solid; border-top-color: var(--wine); background: #fdf5f5; }
+    .card-finkel { border-top-style: solid; border-top-color: #2c3e50; background: #f6f9fc; }
+
+    .quote-text { 
+        font-size: 16px; 
+        font-weight: 700;
+        color: #222;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .quote-author { 
+        font-weight: bold; 
+        color: var(--wine); 
+        font-size: 13px; 
+        border-top: 1px solid rgba(0,0,0,0.08); 
+        padding-top: 8px; 
+        margin-top: auto; /* דוחף את שם הרב לתחתית הכרטיס */
+    }        /* כפתור "כל ההמלצות" - הבטחת מרחק */
         .all-recs-btn-wrapper { 
             text-align: center; 
             margin: 40px 0 60px 0; 
@@ -206,25 +244,19 @@
 <div class="container">
 
     <div class="top-recommendations">
-        <a href="#rec-weiss" class="quote-link">
-            <div class="quote-card">
-                <span class="quote-text">"הספר הנפלא ... מיוחד הוא בסגנונו וסידורו, והקורא ימצא בו חפץ בקל. בטוחני שתועלת גדולה יפיקו רבים מספר נפלא זה"</span>
-                <div class="quote-author">— הגאון הגדול רבי אשר וייס שליט"א</div>
-            </div>
+        <a href="#rec-weiss" class="quote-card card-weiss">
+            <div class="quote-text">"הספר הנפלא ... מיוחד הוא בסגנונו וסידורו, והקורא ימצא בו חפץ בקל. בטוחני שתועלת גדולה יפיקו רבים מספר נפלא זה"</div>
+            <div class="quote-author">⎯  הגאון הגדול רבי אשר וייס שליט"א</div>
         </a>
 
-        <a href="#rec-neugershel" class="quote-link">
-            <div class="quote-card">
-                <span class="quote-text">"מהדורה חדשה זו מעשה אמן, בה מופיעים תמצית דברי רבותינו הראשונים והאחרונים ... הופכת את הדברים לראויים להיאמר ליד שלחן הסדר..."</span>
-                <div class="quote-author">— הגאון הגדול רבי מרדכי דוד נויגרשל שליט"א</div>
-            </div>
+        <a href="#rec-neugershel" class="quote-card card-neugershel">
+            <div class="quote-text">"מהדורה חדשה זו מעשה אמן... הופכת את הדברים לראויים להיאמר ליד שלחן הסדר..."</div>
+            <div class="quote-author">⎯  הגאון הגדול רבי מרדכי דוד נויגרשל שליט"א</div>
         </a>
 
-        <a href="#rec-finkel" class="quote-link">
-            <div class="quote-card">
-                <span class="quote-text">"ניכרת ההשקעה הגדולה להגיש את דברי רבותינו בצורה השווה לכל נפש, דבר דבור על אופניו."</span>
-                <div class="quote-author">— הגאון הצדיק רבי בנימין פינקל שליט"א</div>
-            </div>
+        <a href="#rec-finkel" class="quote-card card-finkel">
+            <div class="quote-text">"ניכרת ההשקעה הגדולה להגיש את דברי רבותינו בצורה השווה לכל נפש, דבר דבור על אופניו."</div>
+            <div class="quote-author">⎯  הגאון הצדיק רבי בנימין פינקל שליט"א</div>
         </a>
     </div>
 
@@ -242,31 +274,44 @@
             <h2 style="margin: 0 0 10px 0; font-size: 28px;">מה מיוחד בהגדת "ברית יעקב"?</h2>
             <p style="margin-bottom: 15px; font-size: 16px;">הגדה המאפשרת להפוך את ליל הסדר מחוויה של "אמירה" ללימוד מעמיק וחיבור למקורות, ללא צורך בערימת ספרים על השולחן.</p>
             
-            <div class="features-list" style="display: flex; flex-direction: column; gap: 8px;">
-                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
-                    <span style="color: var(--gold); font-weight: bold;">✓</span>
-                    <span><b>מבנה עמוד חדשני:</b> לשון ההגדה במרכז, וכל המפרשים סביבה במבט אחד.</span>
-                </div>
-                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
-                    <span style="color: var(--gold); font-weight: bold;">✓</span>
-                    <span><b>דברי הראשונים בלשונם:</b> הבאת דברי רבותינו כפי שכתבו אותם, בדיוק ובבהירות.</span>
-                </div>
-                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
-                    <span style="color: var(--gold); font-weight: bold;">✓</span>
-                    <span><b>סיכום דברי האחרונים:</b> תמצית ברורה המנגישה רעיונות עמוקים לכל נפש.</span>
-                </div>
-                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
-                    <span style="color: var(--gold); font-weight: bold;">✓</span>
-                    <span><b>דיוק והשוואה:</b> ציון מפרשים המסכימים עם אותו רעיון ללא כפילות.</span>
-                </div>
-                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
-                    <span style="color: var(--gold); font-weight: bold;">✓</span>
-                    <span><b>הכל תחת ידכם:</b> כל הפסוקים הנצרכים באותו עמוד - ללא צורך לדפדף.</span>
-                </div>
-                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
-                    <span style="color: var(--gold); font-weight: bold;">✓</span>
-                    <span><b>תרשימים והמחשות:</b> כלים ויזואליים להבנה מהירה של סוגיות מורכבות.</span>
-                </div>
+
+    <div class="features-list" style="display: flex; flex-direction: column; gap: 12px;">
+        
+        <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+            <span style="color: var(--gold); font-weight: bold;">✓</span>
+            <span><b>"צורת הדף" ייחודית:</b> לשון ההגדה במרכז, כשסביבה מסודרים המפרשים במבט אחד: <b>הראשונים בפנים, האחרונים בחוץ והפסוקים בתחתית העמוד.</b></span>
+        </div>
+
+        <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+        <span style="color: var(--gold); font-weight: bold;">✓</span>
+        <span><b>סיכום דברי הראשונים:</b> הבאת דברי רבותינו 
+            <span style="color: var(--wine); font-weight: 700;">(פירוש קדמון, רש"י, רשב"ם, ראב"ן, ר"י בן יקר, רי"ד, שבלי הלקט, ריטב"א, ארחות חיים, אבודרהם, רשב"ץ)</span> 
+            בלשונם המקורית והמתומצתת; במקרה של דעות דומות, מובא הפירוש הבהיר ביותר עם ציון המפרשים המסכימים עמו.
+        </span>
+    </div>
+
+    <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+        <span style="color: var(--gold); font-weight: bold;">✓</span>
+        <span><b>תמצית דברי האחרונים:</b> ליקוט פנינים מגדולי האחרונים 
+            <span style="color: var(--wine); font-weight: 700;">(מהר"ל, נודע ביהודה (צל"ח), הגר"א, הפלאה, חתם סופר, מלבי"ם, אמרי שפר (הנצי"ב מוולוז'ין), ליל שמורים (ערוך השולחן))</span> 
+            המנגישים רעיונות עמוקים בשפה ברורה לכל נפש.
+        </span>
+    </div>
+
+    <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+        <span style="color: var(--gold); font-weight: bold;">✓</span>
+        <span><b>הכל תחת ידכם:</b> כל הפסוקים הנצרכים מופיעים בגוף העמוד - אין צורך לפתוח חומשים או לדפדף באמצע הסדר.</span>
+    </div>
+
+    <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+        <span style="color: var(--gold); font-weight: bold;">✓</span>
+        <span><b>תרשימים והמחשות:</b> כלים ויזואליים להבנה מהירה של מבנה ההגדה ומהלכים מורכבים.</span>
+    </div>
+
+</div>
+
+
+
             </div>
         </div>
     </div>
@@ -274,22 +319,6 @@
     <div class="image-box">
         <p><b>מבנה העמוד - הכל במקום אחד, ללא צורך לדפדף</b></p>
         <img src="https://mohel.vip/hagada/page-example.jpg" alt="עמוד דוגמה מתוך ההגדה">
-    </div>
-    
-    <h2>המקורות המובאים בהגדה</h2>
-    <div class="sources">
-        <div class="source-list">
-            <h3>רבותינו הראשונים</h3>
-            <ul>
-                <li>רש"י</li><li>רשב"ם</li><li>ראב"ן</li><li>רי"ד</li><li>ריטב"א</li><li>אבודרהם</li><li>רשב"ץ</li><li>שבלי הלקט</li>
-            </ul>
-        </div>
-        <div class="source-list">
-            <h3>גדולי האחרונים</h3>
-            <ul>
-                <li>מהר"ל</li><li>הגר"א</li><li>הצל"ח</li><li>חתם סופר</li><li>המלבי"ם</li><li>הנצי"ב</li><li>ערוך השולחן</li><li>הפלאה</li>
-            </ul>
-        </div>
     </div>
 
     <h2 id="all-recommendations">מכתבי ההמלצה המלאים</h2>
