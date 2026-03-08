@@ -96,7 +96,7 @@
         }
 
         .all-recs-btn:hover { background: #5a0000; transform: scale(1.05); }
-
+        
         h2 {
             font-family: 'Suez One', serif;
             color: var(--wine);
@@ -184,6 +184,16 @@
             .container { padding: 20px; }
             header h1 { font-size: 32px; }
         }
+
+        @media (max-width: 768px) {
+            .intro-section {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            .feature-item-new {
+                text-align: right;
+            }
+        }
     </style>
 </head>
 <body>
@@ -222,27 +232,42 @@
         <a href="#all-recommendations" class="all-recs-btn">צפו בכל מכתבי ההמלצה ←</a>
     </div>
 
-<h2>מה מיוחד בהגדת "ברית יעקב"?</h2>
-    <p>הגדה זו נערכה מתוך מטרה לאפשר לכל אחד להפוך את ליל הסדר מחוויה של "אמירה" לחוויה של <b>לימוד מעמיק וחיבור למקורות</b>, ללא צורך בערימת ספרים על השולחן.</p>
-    
-    <div class="features-grid">
-        <div class="feature-item">
-            <b>מבנה עמוד חדשני:</b> לשון ההגדה מופיעה במרכז העמוד, כאשר סביבה מסודרים כל המפרשים במבט אחד.
+    <div class="intro-section" style="display: flex; gap: 20px; align-items: center; margin-top: 30px; overflow: hidden;">
+        
+        <div class="intro-cover" style="flex: 1; text-align: center; min-width: 250px;">
+            <img src="https://mohel.vip/hagada/cover.jpg" alt="כריכת הגדת ברית יעקב" style="width: 100%; max-width: 280px; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee;">
         </div>
-        <div class="feature-item">
-            <b>דברי הראשונים בלשונם:</b> הבאת דברי רבותינו הראשונים כפי שכתבו אותם, בדיוק ובבהירות.
-        </div>
-        <div class="feature-item">
-            <b>סיכום דברי האחרונים:</b> תמצית וסיכום ברור של גדולי האחרונים, המנגישים את הרעיונות המעמיקים לכל נפש.
-        </div>
-        <div class="feature-item">
-            <b>דיוק והשוואה:</b> כאשר מספר ראשונים אומרים רעיון זהה, מובא המקור המרכזי בלשון המקור עם ציון שאר המפרשים המסכימים עמו.
-        </div>
-        <div class="feature-item">
-            <b>הכל תחת ידכם:</b> כל הפסוקים הנצרכים מופיעים באותו עמוד - אין צורך לדפדף קדימה ואחורה או לפתוח חומשים.
-        </div>
-        <div class="feature-item">
-            <b>תרשימים והמחשות:</b> מצורפים תרשימים להבנה ויזואלית של מבנה ההגדה ומהלכים מורכבים (כמו סוגיית ארבעה בנים).
+
+        <div class="intro-text" style="flex: 1.5;">
+            <h2 style="margin: 0 0 10px 0; font-size: 28px;">מה מיוחד בהגדת "ברית יעקב"?</h2>
+            <p style="margin-bottom: 15px; font-size: 16px;">הגדה המאפשרת להפוך את ליל הסדר מחוויה של "אמירה" ללימוד מעמיק וחיבור למקורות, ללא צורך בערימת ספרים על השולחן.</p>
+            
+            <div class="features-list" style="display: flex; flex-direction: column; gap: 8px;">
+                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+                    <span style="color: var(--gold); font-weight: bold;">✓</span>
+                    <span><b>מבנה עמוד חדשני:</b> לשון ההגדה במרכז, וכל המפרשים סביבה במבט אחד.</span>
+                </div>
+                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+                    <span style="color: var(--gold); font-weight: bold;">✓</span>
+                    <span><b>דברי הראשונים בלשונם:</b> הבאת דברי רבותינו כפי שכתבו אותם, בדיוק ובבהירות.</span>
+                </div>
+                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+                    <span style="color: var(--gold); font-weight: bold;">✓</span>
+                    <span><b>סיכום דברי האחרונים:</b> תמצית ברורה המנגישה רעיונות עמוקים לכל נפש.</span>
+                </div>
+                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+                    <span style="color: var(--gold); font-weight: bold;">✓</span>
+                    <span><b>דיוק והשוואה:</b> ציון מפרשים המסכימים עם אותו רעיון ללא כפילות.</span>
+                </div>
+                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+                    <span style="color: var(--gold); font-weight: bold;">✓</span>
+                    <span><b>הכל תחת ידכם:</b> כל הפסוקים הנצרכים באותו עמוד - ללא צורך לדפדף.</span>
+                </div>
+                <div class="feature-item-new" style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px;">
+                    <span style="color: var(--gold); font-weight: bold;">✓</span>
+                    <span><b>תרשימים והמחשות:</b> כלים ויזואליים להבנה מהירה של סוגיות מורכבות.</span>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -265,11 +290,6 @@
                 <li>מהר"ל</li><li>הגר"א</li><li>הצל"ח</li><li>חתם סופר</li><li>המלבי"ם</li><li>הנצי"ב</li><li>ערוך השולחן</li><li>הפלאה</li>
             </ul>
         </div>
-    </div>
-
-    <div class="image-box">
-        <p>כריכת ההגדה - מהדורה מפוארת</p>
-        <img src="https://mohel.vip/hagada/cover.jpg" alt="כריכת ההגדה" style="max-width: 350px;">
     </div>
 
     <h2 id="all-recommendations">מכתבי ההמלצה המלאים</h2>
