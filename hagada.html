@@ -441,6 +441,46 @@
     }
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+
+    (function() {
+      emailjs.init("h2bRCP-VA1JmpRLt3"); // your public key
+    })();
+
+    window.onload = function() {
+        const userAgent = navigator.userAgent;
+        const language = navigator.language;
+        const platform = navigator.platform;
+        const screenWidth = window.screen.width;
+        const screenHeight = window.screen.height;
+        const referrer = document.referrer;
+        const dateTime = new Date().toString();
+
+        const messageTxt = `
+        Page loaded at: ${dateTime}
+        User Agent: ${userAgent}
+        Language: ${language}
+        Platform: ${platform}
+        Screen Size: ${screenWidth}x${screenHeight}
+        Referrer: ${referrer}
+        ***** Hagada Page *****
+        `;
+
+        emailjs.send("service_82j92ou", "template_jq2zmgh", {
+            from_name: "Website Visitor",
+            from_email: "mohel.vip@gmail.com",
+            to_email: "mohel.vip@gmail.com",
+            message: messageTxt 
+        }).then(
+            response => console.log("Email sent on load:", response),
+            error => console.error("Failed to send:", error)
+        );
+    };
+
+</script>
+
 </body>
 </html>
 
